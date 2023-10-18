@@ -1,0 +1,51 @@
+version: 2
+
+sources:
+  - name: order_management_system
+    description: This is a replica of source data of order management system
+    database: GB_OMS_DB
+    schema: sourcedata
+    tables:
+      - name: OLIST_ORDERS
+        description: Raw orders data
+        columns:
+          - name: order_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      - name: OLIST_ORDER_ITEMS
+        description: Raw Order Items data
+
+      - name: OLIST_ORDER_PAYMENTS
+        description: Raw orders payment data
+      
+      - name: OLIST_PRODUCTS
+        description: Raw Products data
+        columns:
+          - name: product_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      - name: OLIST_ORDER_CUSTOMER
+        description: Raw Customer data
+        columns:
+          - name: customer_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      - name: OLIST_SELLERS
+        description: Raw sellers data
+        columns:
+          - name: seller_id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      - name: OLIST_ORDER_REVIEWS
+        description: Raw reviews data
+      - name: OLIST_GEOLOCATION
+        description: Raw geo location data
+                  

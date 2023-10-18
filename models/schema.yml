@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: agg_orders
+    description: this data mart provides the aggregated values at order purchase date level. 
+    columns:
+      - name: "Order Purchase Date"
+        description: Contains the date order was placed
+      - name: "Number of Orders"
+        description: contains the total number of orders placed on the purchase date.
+      - name: "Number of Orders per Customer"
+        description: provides count of customers
+      - name: "Revenue (USD)"
+        description: Total revenue for that day
+      - name: "Average Revenue per Order (USD)"
+        description: provides average of revenue for the order date
+      - name: "Top 3 Products per Category"
+        description: Provides the top three products category that generated the highest revenue
+      - name: "Top 3 Products Revenue per Category (USD)"
+        description: Provides the revenue for the top three products category
